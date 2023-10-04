@@ -9,13 +9,11 @@ public class BattleshipSearch {
     private int[] inputGrid = new int[16];
 
     public BattleshipSearch() {
-        strategySearchMethod = new HorizontalSweepSearch(); // Default strategy
+        strategySearchMethod = new HorizontalSweepSearch(); 
     }
 
     public static void main(String[] args) throws IOException {
         BattleshipSearch battleship = new BattleshipSearch();
-
-        // Reading Input from .txt file
         ArrayList<String> inputLines = new ArrayList<>();
         FileInputStream fileStream = new FileInputStream("C:\\Users\\srikar reddy\\eclipse-workspace\\BattleShip\\src\\input.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
@@ -34,7 +32,7 @@ public class BattleshipSearch {
             battleship.setStrategy(new HorizontalSweepSearch());
             cellsCount = battleship.searchPoints(points);
             if (cellsCount > 0) {
-                battleship.printStatus("Horizontal Sweep", cellsCount);
+                battleship.printStatus("Horizontal Sweep Search", cellsCount);
             }
 
             battleship.setStrategy(new RandomSearchShip());
