@@ -76,7 +76,7 @@ public class BattleshipSearch {
 
     public void printStatus(String strategy, int noOfCells) {
         System.out.println("Strategy: " + strategy);
-        System.out.println("Number of cells searched: " + noOfCells);
+        System.out.println("Number of cells searched: " + (noOfCells-1));
         System.out.println("Carrier found: (" + inputGrid[0] + "," + inputGrid[1] + ") to (" + inputGrid[8] + ","
                 + inputGrid[9] + ") Submarine found: (" + inputGrid[10] + "," + inputGrid[11] + ") to ("
                 + inputGrid[14] + "," + inputGrid[15] + ")");
